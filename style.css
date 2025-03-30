@@ -1,0 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  background-color:white;
+}
+#myCanvas {
+  border: solid black 2px;
+  margin: 0 auto;
+}
