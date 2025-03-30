@@ -2,7 +2,8 @@
 //   let feriCanvas = document.getElementById("feriCanvas");
 //   let context = feriCanvas.getcotext("2d");
 // };
-window.onload = function (e) {
+// window.onload = function (e) {
+document.addEventListener("DOMContentLoaded", function () {
   let canvas = document.getElementById("feriCanvas");
   const ctx = canvas.getContext("2d");
 
@@ -33,4 +34,4 @@ window.onload = function (e) {
   }
 
   setInterval(increaseSize, 10);
-};
+});
