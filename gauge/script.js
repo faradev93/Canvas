@@ -86,8 +86,12 @@ class Person {
     this.mother = mother;
     this.children = children;
   }
+  setChildren(children) {
+    this.children = children;
+  }
 }
 const Hamzeh = new Person("Hamzeh");
+
 const Soqra = new Person("Soqra");
 
 const Jafar = new Person("Jafar", Hamzeh, Soqra, [
@@ -96,3 +100,13 @@ const Jafar = new Person("Jafar", Hamzeh, Soqra, [
 ]);
 
 console.log(Jafar);
+
+const Hassan = new Person("Hassan", Hamzeh, Soqra);
+Hassan.setChildren([
+  new Person("Faramarz"),
+  new Person("Masoud"),
+  new Person("Farzaneh"),
+]);
+
+Hamzeh.setChildren([Hassan, Jafar]);
+console.log("Vajalk:", Hamzeh);
