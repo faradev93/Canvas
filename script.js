@@ -74,7 +74,6 @@ class Rectangle {
 class Gauge {
   constructor(x, y, value) {
     this.center = new Point(x, y);
-    
   }
 }
 //
