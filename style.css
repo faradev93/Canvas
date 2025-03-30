@@ -1,9 +1,14 @@
 * {
   margin: 0;
   padding: 0;
-  background-color:white;
+  background-color: white;
 }
 #myCanvas {
   border: solid black 2px;
   margin: 0 auto;
+}
+#feriCanvas {
+  margin-top: 15px;
+  margin-left: 15px;
+  border: 2px dotted black;
 }
