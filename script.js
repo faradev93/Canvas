@@ -1,6 +1,4 @@
 //
-console.log("hello");
-//
 let x = 0;
 //
 
@@ -14,25 +12,19 @@ class Point {
 }
 
 class Circle {
-  x = 0;
-  y = 0;
-  radius = 0;
   constructor(x, y, r) {
-    this.x = x;
-    this.y = y;
+    this.center = new Point(x, y);
     this.radius = r;
   }
   draw(ctx) {
     ctx.beginPath();
-    ctx.arc(this.x, this.y, this.radius, 0, 2 * Math.PI);
+    ctx.arc(this.center.x, this.center.y, this.radius, 0, 2 * Math.PI);
     ctx.stroke();
     ctx.closePath();
   }
 }
 
 class Line {
-  p1 = null;
-  p2 = null;
   constructor(x1, y1, x2, y2) {
     this.p1 = new Point(x1, y1);
     this.p2 = new Point(x2, y2);
@@ -49,16 +41,12 @@ class Line {
 }
 //
 class Text {
-  text = "";
-  x = 0;
-  y = 0;
   constructor(text, x, y) {
+    this.position = new Point(x, y);
     this.text = text;
-    this.x = x;
-    this.y = y;
   }
   draw(ctx) {
-    ctx.fillText(this.text, this.x, this.y);
+    ctx.fillText(this.text, this.position.x, this.position.y);
   }
 }
 class Rectangle {
@@ -81,6 +69,12 @@ class Rectangle {
     l2.draw(ctx);
     l3.draw(ctx);
     l4.draw(ctx);
+  }
+}
+class Gauge {
+  constructor(x, y, value) {
+    this.center = new Point(x, y);
+    
   }
 }
 //
