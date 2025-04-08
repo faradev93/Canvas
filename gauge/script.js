@@ -68,7 +68,7 @@ window.onload = function () {
   let context = gauge.getContext("2d");
   function render() {
     // Gauge
-    const gauge = new Gauge(200, 400, 0.9, 200);
+    const gauge = new Gauge(200, 400, 0.6, 200);
     gauge.draw(context);
   }
   render();
