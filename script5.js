@@ -93,8 +93,10 @@ function ArrayToObject(arr, key) {
   let obejct = {};
   if (Array.isArray(arr) === true) {
     for (let item of arr) {
-      console.log(key(item));
-      obejct[key(item)] = item;
+      console.log(item[key()]);
+      if (item[key]) {
+        obejct[item[key]] = item;
+      }
     }
     return obejct;
   } else return `Siktir`;
@@ -106,27 +108,11 @@ console.log(
       { name: "ali", age: 20, money: [50, 100, 1000] },
       { name: "Farhad", age: 30, money: [500, 2000, 300] },
     ],
-    function (item) {
-      let total = item.money.reduce((a, b) => {
-        return a + b;
-      }, 0);
-      return total;
+    function () {
+      return "name";
     }
   )
 );
-const money = [50, 1000, 15400, 52200];
-let TotalY = 0;
-for (let index in money) {
-  TotalY += money[index];
-}
-console.log(TotalY);
-
-console.log(
-  money.reduce((a, b) => {
-    return a + b;
-  })
-);
-
 //{20:{name:"ali",age:20} ,30:{name:"farhad",age:30}}
 
 //{ali:{name:"ali",age:20} ,farhad:{name:"farhad",age:30}}
