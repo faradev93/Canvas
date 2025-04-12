@@ -24,7 +24,8 @@ ArraytoObject(
     { name: "sara", age: 21, isvisible: true, money: [550, 1450] },
   ],
   function (key) {
-    return key.isvisible;
+    return key.name;
+    return key.name;
   }
 );
 //
@@ -32,7 +33,7 @@ function ArraytoObject(array, key) {
   let object1 = {};
   let object2 = {};
   let object3 = {};
-  let object4 = { true: [], false: [] };
+  let object4 = {};
 
   let totalMoney = 0;
   for (let item of array) {
@@ -44,7 +45,7 @@ function ArraytoObject(array, key) {
     }, 0);
     object2[totalMoney] = item;
     object3[key(item)] = item;
-    object4[key(item)].push(item);
+    object4[key(item)] = item.age;
   }
   console.log(object1);
   console.log(object2);
