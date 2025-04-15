@@ -21,3 +21,16 @@ const sort2 = numbers2.sort((a, b) => {
 });
 console.log(sort);
 console.log(sort2);
+//
+let object1 = {};
+for (const item in numbers2) {
+  object1[numbers2[item].id] = numbers2[item];
+}
+console.log(object1);
+
+const arrName = "My Name is Faramarz";
+console.log(arrName);
+let arr = arrName.split("a");
+const join=arr.join();
+console.log(arr);
+console.log(join);
