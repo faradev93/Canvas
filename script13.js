@@ -1,15 +1,3 @@
-function Circle() {
-  let computeOptimumLocation = () => {};
-  this.location = { x: 10, y: 20 };
-  this.changeLocation = function (in1, in2) {
-    this.location.x = in1;
-    this.location.y = in2;
-  };
-}
-const circle2 = new Circle();
-circle2.changeLocation(100, 200);
-console.log(circle2);
-
 class Shape {
   constructor(input1, input2) {
     this.x = input1;
@@ -28,4 +16,40 @@ class Circles {
 const Circle22 = new Circles(20, 40, 60);
 console.log(Circle22);
 
+const myArray = [];
+function Circle(radius) {
+  this.radius = radius;
+  this.draw = function () {
+    console.log("draw");
+  };
+}
+const circle = new Circle(1356);
+const circle2 = new Circle(1357);
 
+console.log(circle);
+console.log(circle2);
+
+let array1 = [1];
+let array2 = [2];
+
+console.log(array1);
+console.log(array2);
+
+const person = { name: "Masoud" };
+for (let key in person) {
+  console.log([key]);
+}
+const sep = [1, 32, 3, 4, 7, 7, 1, 47, 5, 4, 4, 888, 88];
+const jam = sep.forEach((Num, i) => {
+  console.log(Num, i);
+});
+
+class Test {
+  constructor(rad1, rad2) {
+    this.x = rad1;
+    this.y = rad2;
+  }
+}
+
+const Circle222 = new Test(156,157);
+console.log(Circle222);
